@@ -1,13 +1,13 @@
 package ar.edu.unlam.pb2.creaturas;
 
-public  class Criatura {
+public abstract class Criatura {
 	
 	private String nombre;
-	private String afinidad;
-	private Integer energia;
+	private Afinidad afinidad;
+	protected Integer energia;
 	private Boolean inestable = false;
 
-	public Criatura(String nombre, String afinidad, Integer energia) {
+	public Criatura(String nombre, Afinidad afinidad, Integer energia) {
 		this.nombre = nombre;
 		this.afinidad = afinidad;
 		this.energia = energia;
@@ -17,7 +17,7 @@ public  class Criatura {
 		return nombre;
 	}
 
-	public String getAfinidad() {
+	public Afinidad getAfinidad() {
 		return afinidad;
 	}
 
@@ -25,7 +25,7 @@ public  class Criatura {
 		return energia;
 	}
 	
-	public Boolean getInestable() {
+	public Boolean isInestable() {
 		return inestable;
 	}
 
