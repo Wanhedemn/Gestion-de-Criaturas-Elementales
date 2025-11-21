@@ -12,6 +12,12 @@ public abstract class Criatura {
 		this.afinidad = afinidad;
 		this.energia = energia;
 	}
+	
+	public void pacificar() { //sirve para que podamos cambiarle el estado
+	    if (this.inestable) {
+	        this.inestable = false;
+	    }
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -31,6 +37,10 @@ public abstract class Criatura {
 
 	public void setInestable(Boolean inestable) {
 		this.inestable = inestable;
+	}
+
+	public void setEnergia(Integer energia) {
+		this.energia = energia;
 	}
 
 }
