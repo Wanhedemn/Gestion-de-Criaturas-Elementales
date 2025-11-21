@@ -1,4 +1,7 @@
-package ar.edu.unlam.pb2.creaturas;
+package ar.edu.unlam.pb2.transformaciones;
+
+import ar.edu.unlam.pb2.creaturas.Afinidad;
+import ar.edu.unlam.pb2.creaturas.Criatura;
 
 public abstract class TransformacionElemental extends Criatura{
 	
@@ -13,6 +16,11 @@ public abstract class TransformacionElemental extends Criatura{
 	@Override
 	public void pacificar() {
 		criaturaTransformada.pacificar();
+	}
+	
+	@Override
+	public void entrenar() {
+	    criaturaTransformada.entrenar();
 	}
 	
 	@Override
