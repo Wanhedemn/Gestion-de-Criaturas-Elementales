@@ -29,20 +29,20 @@ public class CriaturaTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void queNoSePuedaCrearUnaCriaturaConMenosDe0PuntosDeEnergia() {
 		@SuppressWarnings("unused")
-		Criatura richi = new Salvaje("Agumon", Afinidad.FUEGO, -10);
+		Criatura cria = new Salvaje("Agumon", Afinidad.FUEGO, -10);
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void queNoSePuedaCrearUnaCriaturaConMasDe200PuntosDeEnergia() {
 		@SuppressWarnings("unused")
-		Criatura richi = new Salvaje("Agumon", Afinidad.FUEGO, 310);
+		Criatura cria = new Salvaje("Agumon", Afinidad.FUEGO, 310);
 	}
 	
 	@Test(expected = ExcesoDeEnergiaRuntimeException.class)
 	public void queLanceUncheckedExceptionAlEntrenarUnaCriaturaSalvajeYSupereLos200PuntosDeEnergia() throws MaestriaInsuficienteException {
-        Criatura richi = new Salvaje("Agumon", Afinidad.FUEGO, 190);
+        Criatura cria = new Salvaje("Agumon", Afinidad.FUEGO, 190);
         
-        richi.entrenar();
+        cria.entrenar();
 	}
 	
 	@Test
@@ -53,10 +53,10 @@ public class CriaturaTest {
 		assertFalse(cria.isInestable());
 	}
 	
-	//reservado para copy paste
-
 	@Test
-	public void x() {
-		
+	public void queUnaCriaturaComienceSinIndicarQueHaSidoTransformada() {
+		Criatura cria = new Domesticada("Blastoise", Afinidad.AGUA, 100);
+		assertFalse(cria.isInestable());
 	}
+	
 }

@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import ar.edu.unlam.pb2.creaturas.Afinidad;
 import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.exceptions.CriaturaNoRegistradaException;
 import ar.edu.unlam.pb2.exceptions.MaestriaInsuficienteException;
 import ar.edu.unlam.pb2.transformaciones.*;
 
@@ -41,31 +42,93 @@ public class Maestro {
 	public void agregarCriatura(Criatura criatura) {
 		this.criaturasACargo.put(criatura.getNombre(), criatura);
 	}
+	
+	private void validarCriaturaRegistradaAMaestro(Criatura criatura) {
+		if (!criaturasACargo.containsKey(criatura.getNombre())) {
+	        throw new CriaturaNoRegistradaException(
+	            "La criatura " + criatura.getNombre() + " no pertenece al maestro " + this.getNombre()
+	        );
+	    }
+	}
+	
+	private void validarCriaturaRegistradaAMaestro(String nombre) {
+		if (criaturasACargo.get(nombre) == null) {
+			throw new CriaturaNoRegistradaException(
+		            "La criatura " + nombre + " no pertenece al maestro " + this.getNombre()
+		    );
+		}
+	}
+	
 
 	public void entrenarCriatura(Criatura criaturaAEntrenar) throws MaestriaInsuficienteException{
+		validarCriaturaRegistradaAMaestro(criaturaAEntrenar);
+		
 		if(this.nivelDeMaestria<20) { // solo puse un numero simbolico, es para probar nada mas
-			throw new MaestriaInsuficienteException("El nivel del maestro " + this.nombre + " es insuficiente para realizar el entrenamiento");
+			throw new MaestriaInsuficienteException(
+					"El nivel del maestro " + this.nombre + " es insuficiente para realizar el entrenamiento"
+			);
 		}
 		criaturaAEntrenar.entrenar();
 	}
 	
 	public void pacificarCriatura(Criatura criatura) {
+		validarCriaturaRegistradaAMaestro(criatura);
+		
 		criatura.pacificar();
 	}
 	
 	public Criatura ritualBendicionDelRio(Criatura criatura) {
-		return new BendicionDelRio(criatura);
+		validarCriaturaRegistradaAMaestro(criatura);
+		
+		Criatura transformada = new BendicionDelRio(criatura);
+		
+		criaturasACargo.put(criatura.getNombre(), transformada);
+		
+		return transformada;	
 	}
 	
 	public Criatura ritualLlamaInterna(Criatura criatura) {
-		return new LlamaInterna(criatura);
+		validarCriaturaRegistradaAMaestro(criatura);
+		
+		Criatura transformada = new LlamaInterna(criatura);
+		
+		criaturasACargo.put(criatura.getNombre(), transformada);
+		
+		return transformada;
 	}
 	
 	public Criatura ritualVinculoTerrestre(Criatura criatura) {
-		return new VinculoTerrestre(criatura);
+		validarCriaturaRegistradaAMaestro(criatura);
+		
+		Criatura transformada = new VinculoTerrestre(criatura);
+		
+		criaturasACargo.put(criatura.getNombre(), transformada);
+		
+		return transformada;
 	}
 	
 	public Criatura ritualAscensoDelViento(Criatura criatura) {
-		return new AscensoDelViento(criatura);
+		validarCriaturaRegistradaAMaestro(criatura);
+		
+		Criatura transformada = new AscensoDelViento(criatura);
+		
+		criaturasACargo.put(criatura.getNombre(), transformada);
+		
+		return transformada;
+	}
+	
+	public Boolean isTransformada(String nombre) {
+		validarCriaturaRegistradaAMaestro(nombre);
+		return criaturasACargo.get(nombre).isTransformada();
+	}
+	
+	
+	public Criatura getCriatura(String nombre) {
+		validarCriaturaRegistradaAMaestro(nombre);
+		return criaturasACargo.get(nombre);
+	}
+	
+	public boolean hasCriatura(Criatura criatura) {
+	    return this.criaturasACargo.containsKey(criatura.getNombre());
 	}
 }

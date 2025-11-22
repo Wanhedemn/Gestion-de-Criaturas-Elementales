@@ -12,10 +12,15 @@ public abstract class TransformacionElemental extends Criatura{
 
 		this.criaturaTransformada=criatura;
 	}
+	
+	@Override
+	public String getNombre() {
+		return criaturaTransformada.getNombre();
+	}
 
 	@Override
 	public void pacificar() {
-		criaturaTransformada.pacificar();
+		this.criaturaTransformada.pacificar();
 	}
 	
 	@Override
@@ -46,5 +51,10 @@ public abstract class TransformacionElemental extends Criatura{
 	@Override
 	public void setInestable(Boolean inestable) {
 		this.criaturaTransformada.setInestable(inestable);
+	}
+	
+	@Override
+	public Boolean isTransformada() {
+		return true;
 	}
 }

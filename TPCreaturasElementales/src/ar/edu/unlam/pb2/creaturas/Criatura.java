@@ -20,12 +20,6 @@ public abstract class Criatura implements Entrenamiento{
 	public Criatura() {
 		
 	}
-	
-	public void pacificar() { //sirve para que podamos cambiarle el estado
-	    if (this.inestable) {
-	        this.inestable = false;
-	    }
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -42,6 +36,10 @@ public abstract class Criatura implements Entrenamiento{
 	public Boolean isInestable() {
 		return inestable;
 	}
+	
+	public void pacificar() {
+	    this.inestable = false;
+	}
 
 	public void setInestable(Boolean inestable) {
 		this.inestable = inestable;
@@ -49,6 +47,10 @@ public abstract class Criatura implements Entrenamiento{
 
 	public void setEnergia(Integer energia) {
 		this.energia = energia;
+	}
+	
+	public Boolean isTransformada() {
+		return false;
 	}
 
 	public abstract void entrenar();

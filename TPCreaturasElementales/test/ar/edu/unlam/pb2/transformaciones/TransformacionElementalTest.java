@@ -62,6 +62,16 @@ public class TransformacionElementalTest {
 	}
 	
 	@Test
+	public void queAlTransformarALlamaInternaPuedaPacificarSuInestabilidad() {
+		Criatura criatura = new Ancestral("Onix", Afinidad.TIERRA, 120 );
+		criatura = new LlamaInterna(criatura);
+		
+		criatura.pacificar();
+		
+		assertFalse(criatura.isInestable());
+	}
+	
+	@Test
 	public void queAlTransformarAAscensoDelVientoCambieSuAfinidadTemporalmente() {
 		Criatura criatura = new Domesticada("Onix", Afinidad.TIERRA, 120 );
 		Criatura decorador = new AscensoDelViento(criatura);
@@ -88,5 +98,13 @@ public class TransformacionElementalTest {
 	    assertEquals(Afinidad.AIRE, criatura.getAfinidad());
 	    assertTrue(criatura.isInestable());
 	    assertEquals(Integer.valueOf(180) , criatura.getEnergia());
+	}
+	
+	@Test
+	public void queAlTransformarUnaCriaturaMuestreQueEstaTransformada() {
+		 Criatura criatura = new Ancestral("Onix", Afinidad.TIERRA, 120);
+		 criatura = new BendicionDelRio(new LlamaInterna(new AscensoDelViento(criatura)));
+		 
+		 assertTrue(criatura.isTransformada());
 	}
 }
