@@ -13,7 +13,8 @@ public class VinculoTerrestre extends TransformacionElemental {
 		Integer energiaActualizada = criaturaTransformada.getEnergia();
 
 		if (energiaActualizada < 50) {
-			energiaActualizada = 50; // le establecemos el minimo de energia
+			criaturaTransformada.setEnergia(50); // le establecemos el minimo de energia
+			return 50;
 		}
 		return energiaActualizada;
 	}

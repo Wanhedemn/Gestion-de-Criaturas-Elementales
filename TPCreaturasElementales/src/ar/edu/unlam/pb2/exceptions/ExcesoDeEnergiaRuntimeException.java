@@ -4,6 +4,6 @@ public class ExcesoDeEnergiaRuntimeException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
 
 	public ExcesoDeEnergiaRuntimeException(String mensaje) {
-		super(); 
+		super(mensaje); 
 	}
 }

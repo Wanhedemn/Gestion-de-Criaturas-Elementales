@@ -56,7 +56,7 @@ public class CriaturaTest {
 	@Test
 	public void queUnaCriaturaComienceSinIndicarQueHaSidoTransformada() {
 		Criatura cria = new Domesticada("Blastoise", Afinidad.AGUA, 100);
-		assertFalse(cria.isInestable());
+		assertFalse(cria.isTransformada());
 	}
 	
 }
