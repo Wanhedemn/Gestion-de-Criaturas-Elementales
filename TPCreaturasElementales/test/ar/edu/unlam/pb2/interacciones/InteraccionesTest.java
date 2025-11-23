@@ -32,12 +32,42 @@ public class InteraccionesTest {
     public void queSiSonOpuestasAmbasQuedenInestables() {
         Criatura fuego = new Salvaje("Charmander", Afinidad.FUEGO, 100);
         Criatura agua = new Salvaje("Squirtle", Afinidad.AGUA, 100);
+        Criatura tierra = new Salvaje("Charmandirt", Afinidad.TIERRA, 100);
+        Criatura aire = new Salvaje("Squairtle", Afinidad.AIRE, 100);
 
         inter.interactuar(fuego, agua);
-
+        inter.interactuar(agua, fuego);
+        inter.interactuar(tierra, aire);
+        inter.interactuar(aire, tierra);
+        
         assertTrue(fuego.isInestable());
         assertTrue(agua.isInestable());
+        assertTrue(tierra.isInestable());
+        assertTrue(aire.isInestable());
     }
+    
+    @Test
+    public void queSiSonOpuestasYDomesticadasNoQuedenInestables() {
+    	Criatura fuegoDomesticado = new Domesticada("Charmandos", Afinidad.FUEGO, 100);
+        Criatura aguaDomesticado = new Domesticada("Squirtwo", Afinidad.AGUA, 100);
+        
+    	inter.interactuar(aguaDomesticado, fuegoDomesticado);
+
+        assertFalse(fuegoDomesticado.isInestable());
+        assertFalse(aguaDomesticado.isInestable());
+    }
+    
+    @Test
+    public void queSiNoSonOpuestasRetorneNoRealiceCambios() {
+    	Criatura fuego = new Domesticada("Charmandos", Afinidad.FUEGO, 100);
+        Criatura aire = new Domesticada("Squairtle", Afinidad.AIRE, 100);
+        
+    	inter.interactuar(fuego, aire);
+
+        assertFalse(fuego.isInestable());
+        assertFalse(aire.isInestable());
+    }
+    
 
     @Test
     public void queAncestralDomineLaInteraccion() {

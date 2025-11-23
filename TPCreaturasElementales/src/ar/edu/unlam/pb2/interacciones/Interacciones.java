@@ -35,7 +35,8 @@ public class Interacciones {
 	private boolean sonOpuestas(Afinidad a, Afinidad b) {
 		if ((a == Afinidad.AGUA && b == Afinidad.FUEGO) || (a == Afinidad.FUEGO && b == Afinidad.AGUA)) {
 			return true;
-		} else if ((a == Afinidad.AIRE && b == Afinidad.TIERRA) || (a == Afinidad.TIERRA && b == Afinidad.AIRE)) {
+		} 
+		else if ((a == Afinidad.AIRE && b == Afinidad.TIERRA) || (a == Afinidad.TIERRA && b == Afinidad.AIRE)) {
 			return true;
 		}
 		return false;

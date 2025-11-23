@@ -46,7 +46,12 @@ public abstract class Criatura implements Entrenamiento{
 	}
 
 	public void setEnergia(Integer energia) {
-		this.energia = energia;
+		Integer valor = energia;
+		if (energia < 0) {
+			valor = 0;
+		}
+		
+		this.energia = valor;
 	}
 	
 	public Boolean isTransformada() {

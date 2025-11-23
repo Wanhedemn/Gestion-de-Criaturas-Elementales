@@ -14,11 +14,12 @@ public class Salvaje extends Criatura {
 		Integer entrenamientoEstable = (int) (Math.random() * 21) + 15;
 		Integer entrenamientoInestable = (int) (Math.random() * 11) + 35;
 //		
-//		Lo impredecible de la criatura de tipo salvaje lo tomo como que tiene chances de 
+//		Lo impredecible de la criatura de tipo salvaje lo tomé como que tiene chances de 
 //		realizar un entrenamiento que puede ser mas beneficioso o peor que el de los otros tipos
 //		
-//		Especificamente como el enunciado dice que "puede", dando a entender que no ocurre siempre,
-//		por eso hago un "dado de 6 caras" que si da mas de 4 entonces le de el entrenamiento inestable exclusivo del salvaje
+//		Especificamente como el enunciado dice que "puede", dando a entender que no ocurre siempre
+//		y es capaz de entrenar como el resto de las criaturas, por eso hago un "dado de 6 caras"
+//		que si da mas de 4 entonces le de el entrenamiento inestable exclusivo del salvaje
 //		
 		if (dado > 4) {
 			this.energia += entrenamientoInestable;
@@ -31,5 +32,4 @@ public class Salvaje extends Criatura {
 			throw new ExcesoDeEnergiaRuntimeException(this.getNombre() + " ha excedido los 200 puntos de energia");
 		}
 	}
-	
 }

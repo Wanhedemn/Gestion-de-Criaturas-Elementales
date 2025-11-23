@@ -8,13 +8,28 @@ public class Ancestral extends Criatura {
 
 	@Override
 	public void entrenar() {
-		this.energia += (int) (Math.random() * 21) + 30;
+		Integer entrenamientoValor = (int) (Math.random() * 41) + 40;
 		
-		//Eventualmente con las interacciones habra que testear esta condicion!!!
-		if (this.energia < 100) {
-			this.energia = 100;
+		this.setEnergia(this.energia + entrenamientoValor);
+		
+		
+//		Esta condicion es la sensibilidad.
+//
+//		Idealmente, si el entrenamiento me daba un valor entre 70 y 80 entonces
+//		la criatura ancestral se volvia inestable.
+//		Por el proposito de hacer el test dejo la condicion hardcodeada para que ocurra siempre
+		if (entrenamientoValor > 39) {
+			this.setInestable(true);
 		}
 	}
 
+	@Override
+	public void setEnergia(Integer energia) {		
+		 if (energia < 100) {
+			 energia = 100;
+		 }
+		 
+		 this.energia = energia;
+	}
 	
 }
