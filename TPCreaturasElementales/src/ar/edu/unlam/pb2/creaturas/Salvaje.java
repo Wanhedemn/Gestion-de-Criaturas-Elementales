@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.criaturas;
+package ar.edu.unlam.pb2.creaturas;
 
 import ar.edu.unlam.pb2.exceptions.ExcesoDeEnergiaRuntimeException;
 

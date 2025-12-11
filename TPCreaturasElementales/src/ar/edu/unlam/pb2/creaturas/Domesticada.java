@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.criaturas;
+package ar.edu.unlam.pb2.creaturas;
 
 public class Domesticada extends Criatura {
 

@@ -9,11 +9,11 @@ import java.util.Map;
 import org.junit.Before;
 import org.junit.Test;
 
-import ar.edu.unlam.pb2.criaturas.Afinidad;
-import ar.edu.unlam.pb2.criaturas.Ancestral;
-import ar.edu.unlam.pb2.criaturas.Criatura;
-import ar.edu.unlam.pb2.criaturas.Domesticada;
-import ar.edu.unlam.pb2.criaturas.Salvaje;
+import ar.edu.unlam.pb2.creaturas.Afinidad;
+import ar.edu.unlam.pb2.creaturas.Ancestral;
+import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.creaturas.Domesticada;
+import ar.edu.unlam.pb2.creaturas.Salvaje;
 import ar.edu.unlam.pb2.maestro.Maestro;
 
 public class ReporteTest {

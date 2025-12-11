@@ -3,8 +3,7 @@ package ar.edu.unlam.pb2.transformaciones;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
-
-import ar.edu.unlam.pb2.criaturas.*;
+import ar.edu.unlam.pb2.creaturas.*;
 
 public class TransformacionElementalTest {
 

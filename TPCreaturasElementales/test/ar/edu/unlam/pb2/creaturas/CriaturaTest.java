@@ -1,13 +1,9 @@
-package ar.edu.unlam.pb2.criaturas;
+package ar.edu.unlam.pb2.creaturas;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ar.edu.unlam.pb2.criaturas.Afinidad;
-import ar.edu.unlam.pb2.criaturas.Criatura;
-import ar.edu.unlam.pb2.criaturas.Domesticada;
-import ar.edu.unlam.pb2.criaturas.Salvaje;
 import ar.edu.unlam.pb2.exceptions.ExcesoDeEnergiaRuntimeException;
 import ar.edu.unlam.pb2.exceptions.MaestriaInsuficienteException;
 

@@ -3,8 +3,8 @@ package ar.edu.unlam.pb2.maestro;
 import java.util.Map;
 import java.util.HashMap;
 
-import ar.edu.unlam.pb2.criaturas.Afinidad;
-import ar.edu.unlam.pb2.criaturas.Criatura;
+import ar.edu.unlam.pb2.creaturas.Afinidad;
+import ar.edu.unlam.pb2.creaturas.Criatura;
 import ar.edu.unlam.pb2.exceptions.CriaturaNoRegistradaException;
 import ar.edu.unlam.pb2.exceptions.MaestriaInsuficienteException;
 import ar.edu.unlam.pb2.transformaciones.*;

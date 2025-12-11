@@ -1,9 +1,9 @@
 package ar.edu.unlam.pb2.interacciones;
 
-import ar.edu.unlam.pb2.criaturas.Afinidad;
-import ar.edu.unlam.pb2.criaturas.Ancestral;
-import ar.edu.unlam.pb2.criaturas.Criatura;
-import ar.edu.unlam.pb2.criaturas.Domesticada;
+import ar.edu.unlam.pb2.creaturas.Afinidad;
+import ar.edu.unlam.pb2.creaturas.Ancestral;
+import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.creaturas.Domesticada;
 
 public class Interacciones {
 
