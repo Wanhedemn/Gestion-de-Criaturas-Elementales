@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2.creaturas;
+package ar.edu.unlam.pb2.criaturas;
 
 public class Ancestral extends Criatura {
 

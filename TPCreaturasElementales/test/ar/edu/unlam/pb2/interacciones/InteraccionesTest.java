@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import ar.edu.unlam.pb2.creaturas.*;
+import ar.edu.unlam.pb2.criaturas.*;
 import ar.edu.unlam.pb2.transformaciones.*;
 
 public class InteraccionesTest {

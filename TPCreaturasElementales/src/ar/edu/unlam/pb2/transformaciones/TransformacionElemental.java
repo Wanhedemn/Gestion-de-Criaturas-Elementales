@@ -1,7 +1,7 @@
 package ar.edu.unlam.pb2.transformaciones;
 
-import ar.edu.unlam.pb2.creaturas.Afinidad;
-import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.criaturas.Afinidad;
+import ar.edu.unlam.pb2.criaturas.Criatura;
 
 public abstract class TransformacionElemental extends Criatura{
 	
