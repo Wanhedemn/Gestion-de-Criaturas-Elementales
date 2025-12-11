@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import ar.edu.unlam.pb2.creaturas.Afinidad;
-import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.criaturas.Afinidad;
+import ar.edu.unlam.pb2.criaturas.Criatura;
 import ar.edu.unlam.pb2.maestro.Maestro;
 
 public class Reporte {

@@ -1,6 +1,6 @@
 package ar.edu.unlam.pb2.transformaciones;
 
-import ar.edu.unlam.pb2.creaturas.Criatura;
+import ar.edu.unlam.pb2.criaturas.Criatura;
 
 public class BendicionDelRio extends TransformacionElemental{
 
