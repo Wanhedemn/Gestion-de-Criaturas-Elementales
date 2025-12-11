@@ -20,7 +20,7 @@ public class MaestroElementalTest {
 	public void setUp() {
 		pablo = new Maestro("Pablo", 15, Afinidad.FUEGO);
 		gary = new Maestro("Gary", 5, Afinidad.TIERRA);
-		alberto = new Maestro("Pablo", 20, Afinidad.AGUA);
+		alberto = new Maestro("Alberto", 20, Afinidad.AGUA);
 		blastoise = new Domesticada("Blastoise", Afinidad.AGUA, 110);
 	}
 
@@ -56,6 +56,28 @@ public class MaestroElementalTest {
 		assertTrue(alberto.getCriaturasACargo().containsValue(patamon));
 	}
 
+	@Test
+	public void queMaestroEntreneAUnaCriaturaAncestralCorrectamente() 
+			throws MaestriaInsuficienteException {
+		
+		Criatura onix = new Ancestral("Onix", Afinidad.TIERRA, 120);
+		
+		pablo.agregarCriatura(onix);
+		pablo.entrenarCriatura(onix);
+		assertTrue(onix.getEnergia() > 110);
+	}
+	
+	@Test
+	public void queSiSeDaEntrenamientoExtremoACriaturaAncestralSeVuelvaInestable() 
+			throws MaestriaInsuficienteException {
+		
+		Criatura onix = new Ancestral("Onix", Afinidad.TIERRA, 120);
+		
+		pablo.agregarCriatura(onix);
+		pablo.entrenarCriatura(onix);
+		assertTrue(onix.isInestable());
+	}
+	
 	@Test
 	public void queMaestroEntreneUnaCriaturaYSusValoresDeEnergiaCambienCorrectamente()
 			throws MaestriaInsuficienteException {
