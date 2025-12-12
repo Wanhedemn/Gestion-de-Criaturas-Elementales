@@ -89,7 +89,7 @@ public class InteraccionesTest {
         inter.interactuar(ancestral, debil);
 
         assertEquals((Integer)170, ancestral.getEnergia());
-        assertEquals((Integer)0, debil.getEnergia()); // no baja de 0
+        assertEquals((Integer)0, debil.getEnergia());
     }
 
     @Test
@@ -110,7 +110,6 @@ public class InteraccionesTest {
     public void queDecoratorNoAfecteDominioAncestral() {
         Criatura ancestral = new Ancestral("Rayquaza", Afinidad.AIRE, 100);
 
-        // Criatura común, pero transformada con AscensoDelViento (Decorator)
         Criatura decorada = new AscensoDelViento(new Domesticada("Eevee", Afinidad.TIERRA, 50));
 
         inter.interactuar(ancestral, decorada);

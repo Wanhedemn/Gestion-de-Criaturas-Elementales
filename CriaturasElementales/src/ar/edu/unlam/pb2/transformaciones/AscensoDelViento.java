@@ -13,8 +13,4 @@ public class AscensoDelViento extends TransformacionElemental {
 	public Afinidad getAfinidad() { 
 		return Afinidad.AIRE;
 	}
-
-	// cuando se quiera obtener la afinidad va a ser siempre aire aunque en realidad
-	// es temporal porque no le establecemos esa afinidad, simplemente lo forzamos a
-	// que sea esa
 }

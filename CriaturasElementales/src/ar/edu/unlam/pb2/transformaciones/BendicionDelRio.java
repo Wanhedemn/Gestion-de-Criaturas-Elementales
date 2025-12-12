@@ -13,7 +13,7 @@ public class BendicionDelRio extends TransformacionElemental{
 		Integer energiaActualizada= criaturaTransformada.getEnergia() * 2;
 		
 		if(energiaActualizada>180) {
-			energiaActualizada=180; //lo limitamos al maximo de energia
+			energiaActualizada=180;
 		}
 		return energiaActualizada;
 	}

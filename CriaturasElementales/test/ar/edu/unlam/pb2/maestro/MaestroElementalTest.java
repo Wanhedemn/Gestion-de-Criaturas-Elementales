@@ -113,7 +113,7 @@ public class MaestroElementalTest {
 		Criatura onix = new Domesticada("Onix", Afinidad.TIERRA, 120);
 
 		gary.agregarCriatura(onix);
-		gary.entrenarCriatura(onix); // deberia fallar porque el nivel 5<20 que puse en el metodo
+		gary.entrenarCriatura(onix);
 	}
 
 	@Test

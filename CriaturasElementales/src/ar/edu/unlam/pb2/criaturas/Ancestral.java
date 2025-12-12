@@ -12,12 +12,6 @@ public class Ancestral extends Criatura {
 		
 		this.setEnergia(this.energia + entrenamientoValor);
 		
-		
-//		Esta condicion es la sensibilidad.
-//
-//		Idealmente, si el entrenamiento me daba un valor entre 70 y 80 entonces
-//		la criatura ancestral se volvia inestable.
-//		Por el proposito de hacer el test dejo la condicion hardcodeada para que ocurra siempre
 		if (entrenamientoValor > 39) {
 			this.setInestable(true);
 		}

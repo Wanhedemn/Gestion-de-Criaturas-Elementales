@@ -9,7 +9,7 @@ public class Domesticada extends Criatura {
 
 	@Override
 	public void entrenar() {
-		this.energia += (int) (Math.random() * 21) + 30; // entre 30 y 50
+		this.energia += (int) (Math.random() * 21) + 30;
 	}
 	
 	@Override
